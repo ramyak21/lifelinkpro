@@ -1,0 +1,9 @@
+.form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}

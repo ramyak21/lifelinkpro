@@ -1,0 +1,29 @@
+{
+  "name": "lifelink-pro",
+  "private": true,
+  "description": "LifeLink Pro — user portal, admin portal, one Express API, one MySQL database",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w @lifelink/server",
+    "dev:user": "npm run dev -w @lifelink/user-portal",
+    "dev:admin": "npm run dev -w @lifelink/admin-portal",
+    "start:server": "npm run start -w @lifelink/server",
+    "build:user": "npm run build -w @lifelink/user-portal",
+    "build:admin": "npm run build -w @lifelink/admin-portal",
+    "build": "npm run build:user && npm run build:admin",
+    "lint": "npm run lint -w @lifelink/shared -w @lifelink/user-portal -w @lifelink/admin-portal",
+    "sql:migrate": "npm run sql:migrate -w @lifelink/server",
+    "sql:seed": "npm run sql:seed -w @lifelink/server",
+    "test:api": "npm run test:api -w @lifelink/server",
+    "test:security": "npm run test:security -w @lifelink/server",
+    "test:workflow": "npm run test:workflow -w @lifelink/server",
+    "test": "npm run test:api && npm run test:security && npm run test:workflow"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

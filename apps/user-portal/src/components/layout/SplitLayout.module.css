@@ -1,0 +1,28 @@
+.split {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.primary,
+.aside {
+  min-width: 0;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+    align-items: start;
+    gap: var(--space-8);
+  }
+
+  .aside {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+  }
+}

@@ -1,0 +1,105 @@
+.tile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color var(--duration-fast) ease,
+    box-shadow var(--duration-base) ease,
+    transform var(--duration-base) var(--ease-out);
+}
+
+.tile:hover {
+  border-color: var(--color-primary-200);
+  box-shadow: var(--shadow-md);
+  color: inherit;
+  transform: translateY(-1px);
+}
+
+.tile:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+  font-size: 1.35rem;
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  transition: transform var(--duration-base) var(--ease-out), color var(--duration-fast) ease;
+}
+
+.tile:hover .arrow {
+  color: var(--color-primary-700);
+  transform: translateX(3px);
+}
+
+/* Stacked layout: icon on top (used in wider grids) */
+.stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-5);
+}
+
+.stacked .arrow {
+  display: none;
+}
+
+/* Emergency gets a calm red accent, not an alarming one */
+.urgent {
+  border-color: var(--color-danger-200);
+  background: var(--color-danger-50);
+}
+
+.urgent:hover {
+  border-color: var(--color-danger-600);
+}
+
+.urgent .icon {
+  background: var(--color-danger-100);
+  color: var(--color-danger-700);
+}
+
+.urgent .title {
+  color: var(--color-danger-700);
+}
+
+.urgent:hover .arrow {
+  color: var(--color-danger-700);
+}

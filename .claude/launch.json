@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "server",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start:server"],
+      "port": 5000
+    },
+    {
+      "name": "user-portal",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:user"],
+      "port": 5173
+    },
+    {
+      "name": "admin-portal",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:admin"],
+      "port": 5174
+    }
+  ]
+}

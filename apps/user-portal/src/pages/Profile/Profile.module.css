@@ -1,0 +1,83 @@
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-primary-100);
+  color: var(--color-primary-800);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+}
+
+.identityText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.name {
+  font-size: var(--text-xl);
+  overflow-wrap: anywhere;
+}
+
+.details {
+  display: grid;
+  margin-top: var(--space-2);
+}
+
+.detail {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+@media (min-width: 640px) {
+  .detail {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.detail dt {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.detail dd {
+  font-weight: var(--weight-medium);
+  overflow-wrap: anywhere;
+}
+
+.note {
+  margin-top: var(--space-6);
+}
+
+.sessionActions {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* ---------- Editable sections ---------- */
+
+.form {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.form:first-child {
+  margin-top: 0;
+}

@@ -1,0 +1,107 @@
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    align-items: start;
+  }
+
+  .side {
+    position: sticky;
+    top: var(--space-6);
+  }
+}
+
+.main {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.stack {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.statusHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.muted {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.facts dt {
+  color: var(--text-muted);
+}
+
+.facts dd {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.volunteer {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.volunteerIcon {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary-600);
+}
+
+.volunteerName {
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.pickList {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.pickItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.pickMain {
+  display: grid;
+  gap: var(--space-1);
+  justify-items: start;
+  min-width: 0;
+}

@@ -1,0 +1,24 @@
+.phone {
+  white-space: nowrap;
+}
+
+.truncate {
+  display: inline-block;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+@media (max-width: 767px) {
+  /* Cards have room to wrap */
+  .truncate {
+    max-width: none;
+    white-space: normal;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}

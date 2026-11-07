@@ -1,0 +1,60 @@
+.formError {
+  margin-bottom: var(--space-6);
+}
+
+.section + .section {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-default);
+}
+
+.sectionHeader {
+  margin-bottom: var(--space-4);
+}
+
+.sectionTitle {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+}
+
+.sectionDescription {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .grid:not(.single) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-default);
+}
+
+.actions > * {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .actions > * {
+    width: auto;
+  }
+}

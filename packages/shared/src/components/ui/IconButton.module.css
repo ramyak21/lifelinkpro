@@ -1,0 +1,17 @@
+.iconButton {
+  width: 40px;
+  min-height: 40px;
+  padding: 0;
+}
+
+.icon {
+  display: inline-flex;
+  font-size: 1.25rem;
+}
+
+@media (pointer: coarse) {
+  .iconButton {
+    width: var(--control-height);
+    min-height: var(--control-height);
+  }
+}

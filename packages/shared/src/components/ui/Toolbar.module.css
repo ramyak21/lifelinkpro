@@ -1,0 +1,36 @@
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.controls > :first-child {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* The search box keeps a usable width; long filters wrap underneath */
+  .controls > :first-child {
+    flex: 1 1 240px;
+    min-width: 220px;
+    max-width: 420px;
+  }
+}
+
+.summary {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}

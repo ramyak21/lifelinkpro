@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.form > button[type="submit"] {
+  margin-top: var(--space-2);
+}
+
+.notice {
+  margin-bottom: var(--space-6);
+}
+
+.altLink {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}

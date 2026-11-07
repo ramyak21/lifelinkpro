@@ -1,0 +1,234 @@
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: var(--space-12) 0;
+  background:
+    radial-gradient(ellipse at 85% 0%, var(--color-primary-100), transparent 55%),
+    linear-gradient(180deg, var(--color-primary-50) 0%, var(--bg-page) 100%);
+  border-bottom: 1px solid var(--border-default);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: var(--space-20) 0;
+  }
+}
+
+.heroInner {
+  display: grid;
+  gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .heroInner {
+    grid-template-columns: minmax(0, 7fr) minmax(320px, 4fr);
+    align-items: center;
+    gap: var(--space-16);
+  }
+}
+
+.heroText {
+  max-width: 640px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary-700);
+}
+
+.heroTitle {
+  margin-top: var(--space-5);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: var(--text-5xl);
+  }
+}
+
+.heroLead {
+  margin-top: var(--space-5);
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 479px) {
+  .heroActions > * {
+    width: 100%;
+  }
+}
+
+.heroCallout {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: var(--space-16) 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--space-20) 0;
+  }
+}
+
+.sectionAlt {
+  background: var(--bg-surface);
+  border-block: 1px solid var(--border-default);
+}
+
+.groups {
+  display: grid;
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-10);
+  }
+}
+
+.groupTitle {
+  font-size: var(--text-lg);
+}
+
+.groupDescription {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.serviceList {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* ---------- Steps ---------- */
+
+.steps {
+  display: grid;
+  gap: var(--space-4);
+  counter-reset: none;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+.step {
+  padding: var(--space-6);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+}
+
+.stepIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+  font-size: 1.35rem;
+}
+
+.stepNumber {
+  margin-top: var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary-700);
+}
+
+.stepTitle {
+  margin-top: var(--space-1);
+  font-size: var(--text-lg);
+}
+
+.stepText {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* ---------- Call to action ---------- */
+
+.ctaSection {
+  padding: 0 0 var(--space-16);
+}
+
+@media (min-width: 1024px) {
+  .ctaSection {
+    padding-bottom: var(--space-20);
+  }
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-xl);
+  background: var(--color-primary-50);
+}
+
+@media (min-width: 900px) {
+  .cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-10) var(--space-12);
+  }
+}
+
+.ctaCopy {
+  max-width: 620px;
+}
+
+.ctaTitle {
+  font-size: var(--text-2xl);
+}
+
+.ctaText {
+  margin-top: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (max-width: 479px) {
+  .ctaActions > * {
+    width: 100%;
+  }
+}

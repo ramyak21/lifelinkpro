@@ -1,0 +1,202 @@
+.wrapper {
+  min-width: 0;
+}
+
+/* ---------- Table (768px and up) ---------- */
+
+.tableScroll {
+  /* relative: keeps visually-hidden (absolute) labels inside the scroll box */
+  position: relative;
+  display: none;
+  overflow-x: auto;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table th {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-neutral-50);
+  border-bottom: 1px solid var(--border-default);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-default);
+  vertical-align: middle;
+  color: var(--text-secondary);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr {
+  transition: background-color var(--duration-fast) ease;
+}
+
+.table tbody tr:hover {
+  background: var(--color-neutral-50);
+}
+
+.primaryCell {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary) !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Pinned to the right edge so Delete stays visible when the table scrolls sideways */
+.actionsHeader,
+.actionsCell {
+  position: sticky;
+  right: 0;
+  width: 1%;
+  text-align: right;
+  white-space: nowrap;
+  box-shadow: inset 1px 0 0 var(--border-default);
+}
+
+.actionsCell {
+  background: var(--bg-surface);
+}
+
+.table tbody tr:hover .actionsCell {
+  background: var(--color-neutral-50);
+}
+
+/* ---------- Cards (phones) ---------- */
+
+.cards {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card {
+  padding: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.cardTitle {
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.cardFields {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.cardField {
+  display: grid;
+  grid-template-columns: minmax(96px, 35%) 1fr;
+  gap: var(--space-3);
+}
+
+.cardField dt {
+  color: var(--text-muted);
+}
+
+.cardField dd {
+  min-width: 0;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-default);
+}
+
+@media (min-width: 768px) {
+  .tableScroll {
+    display: block;
+  }
+
+  .cards {
+    display: none;
+  }
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.range strong {
+  color: var(--text-primary);
+}
+
+.pageButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.pageLabel {
+  white-space: nowrap;
+}
+
+/* ---------- Sortable headers ---------- */
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sortButton:hover {
+  color: var(--text-primary);
+}
+
+.sortIcon {
+  flex: none;
+  width: 13px;
+  height: 13px;
+  opacity: 0.45;
+}
+
+.sortActive {
+  opacity: 1;
+  color: var(--color-primary-700);
+}

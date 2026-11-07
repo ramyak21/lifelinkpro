@@ -1,0 +1,54 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: var(--text-primary);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-600);
+  color: var(--text-inverse);
+  font-size: 1.15rem;
+}
+
+.name {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 359px) {
+  .name {
+    font-size: var(--text-md);
+  }
+}
+
+.suffix {
+  padding: 1px 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-100);
+  color: var(--color-primary-800);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+}
+
+.inverted,
+.inverted:hover {
+  color: var(--text-inverse);
+}
+
+.inverted .mark {
+  background: var(--color-primary-600);
+}
